@@ -1,5 +1,5 @@
-let paletas = document.getElementById("color-palete").style.display = "inline-block";
-let color = document.getElementsByClassName(".color")
+const paletas = document.getElementById("color-palete").style.display = "inline-block";
+const color = document.getElementsByClassName(".color")
 color.style.border = "1px solid black";
 color.style.width = "40px";
 color.style.height = "40px";
