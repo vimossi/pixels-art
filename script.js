@@ -12,4 +12,4 @@ function square(num) {
 }
 square(5);
 
-
+const teste = 0;
