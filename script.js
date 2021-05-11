@@ -23,13 +23,22 @@ function makeSelected(event) {
 for (let index = 0; index < selectableColors.length; index += 1) {
   selectableColors[index].addEventListener('click', makeSelected);
 }
-// ele armazenou a seleção do .color e criou uma função evento, fazendo que todos com classe .selected index fossem atribuidas a 'color'. Depois criou um laço de repetição para que o evento funcionasse com todos da mesma classe. 
-function colorindo(event){
+// ele armazenou a seleção do .color e criou uma função evento, fazendo que todos com classe .selected index fossem atribuidas a 'color'. Depois criou um laço de repetição para que o evento funcionasse com todos da mesma classe.
+function colorindo(event) {
   const pixel = event.target;
   pixel.style.backgroundColor = document.querySelectorAll('.selected')[0].id;
 }
 const pixels = document.querySelectorAll('.pixel');
 for (let index = 0; index < pixels.length; index += 1) {
   pixels[index].addEventListener('click', colorindo);
-}
+};
 // estudo // vou refatorar com outro codigo
+
+const botao = document.getElementById('clear-board');
+function limpa() {
+  const branco = document.querySelectorAll('.pixel');
+  for (let index = 0; index < branco.length; index += 1) {
+    branco[index].style.backgroundColor = 'white';
+  }
+}
+botao.addEventListener('click', limpa);
